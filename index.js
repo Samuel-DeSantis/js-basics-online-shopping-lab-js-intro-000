@@ -40,8 +40,10 @@ function total() {
 function removeFromCart(item) {
   var len = cart.length;
   for(let i = 0; i < len; i++) {
-    if(item === cart[i]["itemName"]) {cart.splice(i,1);}
-    //else {return "That item is not in your cart.";}
+    if(item === cart[i]["itemName"]) {
+      cart.splice(i,1);
+      break;
+    }
   }
   return "That item is not in your cart.";
 }
